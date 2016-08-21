@@ -1,5 +1,5 @@
 import { Router, Route, Link, browserHistory, IndexRoute  } from 'react-router';
-
+import React from 'react';
 
 var About = React.createClass({
    render: function() {

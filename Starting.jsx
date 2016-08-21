@@ -1,15 +1,15 @@
+import Button from 'react-bootstrap/lib/Button';
 import { Router, Route, Link, browserHistory, IndexRoute  } from 'react-router';
 import CommentBox from './CommentBox.jsx';
+import React from 'react';
+import style from './styles.css';
 
 var Starting = React.createClass({
   render: function() {
     return (
-      <div className="starting">
-          <ul>
-            <li><Link to ="/about"> About </Link></li>
-            <li><Link to ="/new"> New</Link></li>
-            <li><Link to ="/comment"> Comment</Link></li>
-          </ul>
+      <div >
+            <Link to ="/view"><Button>View</Button></Link>
+            <Link to ="/status"><Button>Status</Button></Link>
           {this.props.children}
       </div>
     );

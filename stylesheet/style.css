@@ -1,0 +1,65 @@
+.commentForm {
+  width: 60%;
+  padding: 8% 0;
+  margin: auto;
+}
+fieldset {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 4px;
+  border-color: black;
+
+}
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0 10px 0;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 15%;
+    float: right;
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+input[type=number], select {
+    padding: 2px 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+textarea {
+    width: 80%;
+    height: 150px;
+    padding: 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: none;
+    background: #f2f2f2;
+}
+#section {
+  width: 20%;
+  background: #f2f2f2;
+}
+#date,#timehr,#timemin {
+  background: #f2f2f2;
+}
+
+#sectionsp {
+  padding-left: 100px;
+  text-align: center;
+}
+
+#timesp {
+  float: right;
+}
+#statusdiv,#print {
+  padding: 20px 0 0 20px;
+}

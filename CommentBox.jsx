@@ -1,5 +1,6 @@
 import CommentList from './CommentList.jsx';
 import CommentForm from './CommentForm.jsx';
+import React from 'react';
 
 
 var CommentBox = React.createClass({

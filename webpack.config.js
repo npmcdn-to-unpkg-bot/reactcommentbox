@@ -21,7 +21,10 @@ var config = {
             query: {
                presets: ['es2015', 'react']
             }
-         }
+         },
+         { test: /\.css$/, loader: "style-loader!css-loader" },
+         { test: /\.png$/, loader: "url-loader?limit=100000" },
+         { test: /\.jpg$/, loader: "file-loader" }
       ]
    }
 }

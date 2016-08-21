@@ -1,4 +1,5 @@
 import Comment from './Comment.jsx';
+import React from 'react';
 
 var CommentList = React.createClass({
   render: function() {
