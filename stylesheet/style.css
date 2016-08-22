@@ -1,7 +1,23 @@
 .commentForm {
-  width: 60%;
-  padding: 8% 0;
+  width: 85%;
+  padding-top: 6%;
   margin: auto;
+}
+.comment {
+  width: 100%;
+  border-radius: 4px;
+  border-color: black;
+}
+.header1 {
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.row1 {
+  display: flex;
+  padding-top: 10px;
+  padding-left: 10px;
 }
 fieldset {
   width: 100%;
@@ -10,29 +26,21 @@ fieldset {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   border-radius: 4px;
   border-color: black;
-
 }
 input[type=submit] {
-    background-color: #4CAF50;
+    background-color: #4c70ba;
     color: white;
     padding: 10px 0 10px 0;
     margin: 8px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    width: 15%;
-    float: right;
+    width: 10%;
 }
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #5f7ec1;
 }
-input[type=number], select {
-    padding: 2px 12px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
+
 textarea {
     width: 80%;
     height: 150px;
@@ -44,22 +52,57 @@ textarea {
     resize: none;
     background: #f2f2f2;
 }
-#section {
-  width: 20%;
+#datesp {
+  width: 15%;
+}
+#date {
+  width: 100%;
   background: #f2f2f2;
 }
-#date,#timehr,#timemin {
+#projectvalue {
+  padding-left: 25px;
+  width: 35%;
+}
+#project,#section {
+  width: 100%;
   background: #f2f2f2;
 }
-
 #sectionsp {
-  padding-left: 100px;
+  padding-left: 25px;
+  width: 20%;
+}
+#timesp {
+  padding-left: 25px;
+  width: 20%;
+}
+#timehr,#timemin {
+  width: 40%;
+  background: #f2f2f2;
+}
+#statusdiv {
+  padding-top: 30px;
+  padding-left: 10px;
+  width: 50%;
+}
+#statusbox {
+  width: 100%;
+}
+#print {
+  padding-left: 10px;
+}
+#but {
   text-align: center;
 }
-
-#timesp {
-  float: right;
+h3 {
+  font-weight: bold;
+  padding-left: 10px;
 }
-#statusdiv,#print {
-  padding: 20px 0 0 20px;
+#lefts {
+    width: 15%;
+}
+#centers {
+    width: 15%;
+}
+#rights {
+    width: 15%;
 }

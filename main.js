@@ -10,10 +10,11 @@ import Status from './enterpage/Status.jsx';
 
 ReactDOM.render((
   <Router history = {browserHistory}>
-     <Route path = "/" component = {Starting}>
+    <Route path = "/" component = {Starting} >
+        <IndexRoute component = {Status} />
         <Route path = "view" component = {View} />
         <Route path = "status" component = {Status} />
-     </Route>
+    </Route>
   </Router>
 
 ), document.getElementById('app'));
