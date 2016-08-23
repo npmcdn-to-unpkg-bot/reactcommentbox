@@ -7,8 +7,10 @@ var Starting = React.createClass({
   render: function() {
     return (
       <div >
-            <Link to ="/view"><Button>View</Button></Link>
-            <Link to ="/status"><Button>Status</Button></Link>
+            <Link to ="/"><Button>Home</Button></Link>
+            <Link to ="/view" activeStyle={{ color: 'red' }}><Button>View</Button></Link>
+            <Link to ="/status" activeStyle={{ color: 'red' }}><Button>Status</Button></Link>
+            <Link to ="/facebook/react" activeStyle={{ color: 'red' }}><Button>New</Button></Link>
               {this.props.children}
       </div>
 
