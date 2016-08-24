@@ -3,6 +3,31 @@
   padding-top: 6%;
   margin: auto;
 }
+.samplenew {
+  width: 100%;
+  display: flex;
+  border: 2px solid black;
+  margin-bottom: 1%;
+}
+.samplesecond {
+  padding-top: 5%;
+}
+.inside {
+  padding-right: 10%;
+  width: 50%;
+  border: 1px solid black;
+  text-align: center;
+
+}
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
 .comment {
   width: 100%;
   border-radius: 4px;

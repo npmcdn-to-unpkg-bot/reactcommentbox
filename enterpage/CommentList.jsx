@@ -12,7 +12,6 @@ var CommentList = React.createClass({
     });
     return (
       <div className="commentList">
-        {commentNodes}
       </div>
     );
   }
