@@ -1,27 +1,25 @@
 import React from 'react';
 import CommentForm from './CommentForm.jsx';
 import CommentList from './CommentList.jsx';
+import { connect } from 'react-redux'
+import { addTodo } from '../actions/actions'
 
 var Status = React.createClass({
-  getInitialState: function() {
-    return {data: []};
-  },
-  handleCommentSubmit: function(comment) {
-    var comments = [];
-    comment.id = Date.now();
-    var txt = {"date": comment.date, "project":comment.project, "section" : comment.section, "timehr": comment.timehr, "timemin": comment.timemin, "status": comment.status, "id": comment.id};
-    localStorage.setItem(localStorage.length,JSON.stringify(txt));
-    var newComments = comments.concat([comment]);
-    this.setState({data: newComments});
-  },
   render: function() {
+    const { dispatch, visibleTodos } = this.props;
     return (
       <div>
-        <CommentList data={this.state.data} />
-        <CommentForm onCommentSubmit={this.handleCommentSubmit} />
+        <CommentList data={visibleTodos}/>
+        <CommentForm onCommentSubmit = {status =>
+               dispatch(addTodo(status))}/>
       </div>
     );
   }
 });
+function select(state) {
+   return {
+      visibleTodos: state.todos
+   }
+}
 
-export default Status;
+export default connect(select)(Status)

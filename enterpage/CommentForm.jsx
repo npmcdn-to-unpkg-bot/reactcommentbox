@@ -34,11 +34,12 @@ var CommentForm = React.createClass({
     var section = this.state.section.trim();
     var timehr = this.state.timehr.trim();
     var timemin = this.state.timemin.trim();
-    var status = this.state.status.trim();
+    const status = this.state.status.trim();
     if (!status) {
        return;
     }
     this.props.onCommentSubmit({date: date, project: project, section: section, timehr: timehr, timemin: timemin, status: status});
+  //  this.props.onCommentSubmit(status);
     this.setState({date: '', project: '', section: '',timehr: '', timemin: '',status: ''});
     document.getElementById("date").value = "";
     document.getElementById("project").value = "";

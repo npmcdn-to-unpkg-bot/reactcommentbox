@@ -1,7 +1,5 @@
 import { Router, Route, Link, browserHistory, IndexRoute  } from 'react-router';
 import Starting from './Starting.jsx';
-import About from './About.jsx';
-import CommentBox from './CommentBox.jsx';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -9,16 +7,13 @@ import View from './viewpage/View.jsx';
 import Status from './enterpage/Status.jsx';
 import Repo from './enterpage/Repo.jsx';
 
-var firebase = require("firebase");
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import todoApp from './reducers/reducers';
+let store = createStore(todoApp);
 
-var config = {
-    apiKey: "AIzaSyCEiW0RKkpl3osP2Dc0qOpqm7IRso0-LnM",
-    authDomain: "statureport.firebaseapp.com",
-    databaseURL: "https://statureport.firebaseio.com",
-    storageBucket: "statureport.appspot.com",
-  };
-  firebase.initializeApp(config);
-ReactDOM.render((
+
+ReactDOM.render(<Provider store = {store} >
   <Router history = {browserHistory}>
     <Route path = "/" component = {Starting} >
         <IndexRoute component = {Status} />
@@ -27,5 +22,5 @@ ReactDOM.render((
         <Route path="/:userName/:repoName" component={Repo}/>
     </Route>
   </Router>
-
-), document.getElementById('app'));
+   </Provider>,
+ document.getElementById('app'));
